@@ -1,0 +1,10 @@
+services:
+  savings-envelopes:
+    build:
+      context: ./app
+    container_name: savings-envelopes
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data:Z
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Copy the app files into the container
+COPY . .
+
+# Install Flask
+RUN pip install flask
+
+# Expose the port the app runs on
+EXPOSE 8080
+
+# Start the app
+CMD ["python", "server.py"]
