@@ -27,10 +27,9 @@ jobs:
 
     - name: Validate JSON files
       run: |
-        python -m json.tool < data/history.json > /dev/null
-        for f in data/*.txt; do
-          if [[ "$f" != *".json" ]]; then continue; fi
-          python -m json.tool < "$f" > /dev/null || exit 1
+        for f in data/*.json; do
+          echo "Validating $f"
+          python -m json.tool < "$f" > /dev/null || (echo "❌ Invalid JSON: $f" && exit 1)
         done
 
     - name: Check HTML structure
