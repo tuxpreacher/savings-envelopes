@@ -46,7 +46,7 @@ podman-compose up --build
 
 ## 🗂️ Project Structure
 
-```
+```shell
 app/
   ├── index.html       # Frontend UI
   ├── script.js        # UI logic
