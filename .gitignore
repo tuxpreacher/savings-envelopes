@@ -3,7 +3,5 @@ __pycache__/
 *.pyo
 *.log
 .env
-data/*.txt
-data/*.json
 *.tar.gz
 *.zip
